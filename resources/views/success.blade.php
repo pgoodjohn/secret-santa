@@ -65,24 +65,6 @@
         </style>
     </head>
     <body>
-            <form method="POST" action="/api/signup">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Nome:</strong>
-                            <input type="text" name="name" class="form-control" placeholder="Nome">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Email:</strong>
-                            <input class="form-control" name="email" placeholder="Email">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <button type="submit" class="btn btn-primary">Invia</button>
-                    </div>
-                </div>
-            </form>
+        <h1>BRAVO</h1>
     </body>
 </html>
