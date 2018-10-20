@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Participant;
 use Validator;
 
-class UserController extends Controller
+class ParticipantController extends Controller
 {
 
     public function signup(Request $request)
