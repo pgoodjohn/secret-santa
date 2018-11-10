@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -19,30 +18,9 @@
         <div class="row align-items-center">
             <div class="col"></div>
             <div class="col text-center">
-                <h3>@lang('secret-santa.title')</h3>
-                <br>
-                <img src="http://www.freejupiter.com/wp-content/uploads/2014/10/Mesmerizing-Santa-Claus-Wallpapers-8.jpg" width="150px">
+                <h1>Error!</h1>
             </div>
             <div class="col"></div>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-sm-4">
-            </div>
-            <div class="col-sm-4">
-                    <form method="POST" action="/api/signup">
-                        <div class="form-group">
-                            <strong>Nome:</strong>
-                            <input type="text" name="name" class="form-control" placeholder="Nome">
-                        </div>
-                        <div class="form-group">
-                            <strong>Email:</strong>
-                            <input class="form-control" name="email" placeholder="Email">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Invia</button>
-                    </form>            
-                </div>
-            <div class="col-sm-4">
-            </div>
         </div>
     </body>
 </html>
