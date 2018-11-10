@@ -1,0 +1,27 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+
+# Ensure we skip ".env", which is only for local development
+skip_files:
+  - .env
+
+env_variables:
+  # Put production environment variables here.
+  APP_LOG: errorlog
+  APP_KEY: SomeRandomStringWith32Characters
+  STORAGE_DIR: /tmp
+  DB_CONNECTION: mysql
+  DB_HOST: 127.0.0.1
+  DB_POR: 3306
+  DB_DATABASE: secret_santa
+  DB_USERNAME: root
+  DB_PASSWORD:
+  MAIL_DRIVER: smtp
+  MAIL_HOST: smtp.mailtrap.io
+  MAIL_PORT: 2525
+  MAIL_USERNAME: null
+  MAIL_PASSWORD: null
+  MAIL_ENCRYPTION: null
