@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use App\Person;
+use App\Participant;
 use Mail;
 
 class Controller extends BaseController
@@ -20,22 +20,24 @@ class Controller extends BaseController
 
         $people = [];
 
-        for ($i = 0; $i < sizeof($request->people); $i++) {
-            array_push($people, new Person($request->people[$i]["name"], $request->people[$i]["email"]));
+        $participants = \App\Participant::all();
+
+        foreach($participants as $participant){
+            array_push($people, $participant);
         }
-        $i = 0;
 
         shuffle($people);
 
+        $i = 0;
         foreach ($people as $person) {
             $i++;
             if ($i == sizeof($people)) {
                 $i = 0;
             }
             $otherPerson = $people[$i];
-            // echo $person->name . "->" . $otherPerson->name . "<br>";
-
+            // \Log::debug($person->name . "->" . $otherPerson->name);
             Mail::to($person->email)->send(new SendSecretSanta($person, $otherPerson));
+
         }
 
         return 'ok';

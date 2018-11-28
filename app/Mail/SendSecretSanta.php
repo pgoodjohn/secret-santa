@@ -2,7 +2,7 @@
 
 namespace App\Mail;
 
-use App\Person;
+use App\Participant;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -26,7 +26,7 @@ class SendSecretSanta extends Mailable
      * @param Person $santa
      * @param Person $santee
      */
-    public function __construct(Person $santa, Person $santee)
+    public function __construct(Participant $santa, Participant $santee)
     {
         $this->santa = $santa;
         $this->santee = $santee;
@@ -39,7 +39,6 @@ class SendSecretSanta extends Mailable
      */
     public function build()
     {
-        \Log::debug("Building!");
         return $this->view('emails.santa')->with(['santa' => $this->santa->name, 'santee' => $this->santee->name])->subject("I Cagnacci #SecretSanta");
     }
 }
