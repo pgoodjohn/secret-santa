@@ -13,10 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::post('/', 'Controller@send');
-
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::post('/signup', 'ParticipantController@signup');

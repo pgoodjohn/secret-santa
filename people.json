@@ -1,12 +1,12 @@
 {
-  "people": [
-    {
-      "name": "",
-      "email": ""
-    },
-    {
-      "name": "",
-      "email": ""
-    }
-  ]
+    "people": [
+        {
+            "name": "Pietro",
+            "email": "pietro@mail.com"
+        },
+        {
+            "name": "Mario",
+            "email": "mario@mail.com"
+        }
+    ]
 }
