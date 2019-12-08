@@ -1,13 +1,32 @@
-# Secret Santa
+# Secret Santa Database and Mailer
 
-Simple project to create couples and send emails for a Secret Santa exchange.
+This whole thing just creates the database and performs the emailing.
 
-It was created to organize 2017 Secret Santa with my friends, it is based on Laravel 5.5. Simply run `php artisan serve` and make a POST request to `localhost:8000/api` including, in the body of the request, a JSON body following the schema of `people.json` (you can have however many people you want!!).
+# Set up
 
-## Contributing
+Start by copying the `.env.example` file:
 
-Feel free to contribute in whatever way you want! This project was hacked together really quickly so it might not be the best, but you might want to do some improvements!
+```bash
+cp .env.example .env
+```
 
-## License
+Fill the information for your database connection and set up your AWS SES keys for emails.
 
-Please see LICENSE.md
+## Database
+
+Create the database by running
+
+```
+php artisan db:migrate
+```
+
+## Sending Emails
+
+To send the emails run:
+
+```
+php artisan emails:send
+```
+
+### To Do's 
+- [ ] Add debug mode for email sender
